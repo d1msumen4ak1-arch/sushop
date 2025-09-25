@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widy Store - Toko Sepatu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">WidyStore</div>
+    <div class="search">
+      <input type="text" placeholder="Cari sepatu kesayanganmu...">
+    </div>
+    <div class="icons" onclick="openCart()">🛒 👤</div>
+  </header>
+
+  <nav>
+    <a href="#">Sneakers</a>
+    <a href="#">Formal</a>
+    <a href="#">Sport</a>
+    <a href="#">Boots</a>
+    <a href="#">Sandal</a>
+  </nav>
+
+  <div class="hero">Selamat Datang di Widy Store</div>
+
+  <div class="container">
+    <h2>Produk Pilihan</h2>
+    <div class="products" id="products"></div>
+  </div>
+
+  <!-- Modal Produk -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImg" src="" alt="">
+      <h2 id="modalName"></h2>
+      <p class="price" id="modalPrice"></p>
+      <label>Ukuran: </label>
+      <select id="modalSize">
+        <option>39</option>
+        <option>40</option>
+        <option>41</option>
+        <option>42</option>
+        <option>43</option>
+      </select>
+      <p class="rating">★★★★★</p>
+      <p class="reviews">5 ulasan positif</p>
+      <button class="btn" onclick="addToCart()">Tambahkan ke Keranjang</button>
+    </div>
+  </div>
+
+  <!-- Modal Keranjang -->
+  <div class="modal" id="cartModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCart()">&times;</span>
+      <h2>Keranjang Belanja</h2>
+      <div id="cartItems"></div>
+      <p id="cartTotal"></p>
+      <button class="btn" onclick="clearCart()">Batalkan</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Widy Store | Mirip Lazada Style | Hubungi <a href="#">CS Kami</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
